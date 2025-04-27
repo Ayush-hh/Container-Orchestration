@@ -1,4 +1,4 @@
-![WhatsApp Image 2025-04-27 at 20 26 34_302b16cb](https://github.com/user-attachments/assets/7f5a7097-21de-4dc5-9094-138983da13a5)![WhatsApp Image 2025-04-27 at 20 26 07_02889c58](https://github.com/user-attachments/assets/63ca8b19-6af9-4c7c-ba7a-169861b6f344)# 🐳 Dockerized Streamlit Development Environment
+# 🐳 Dockerized Streamlit Development Environment
 
 ## 🚀 Prerequisites
 Before setting up the environment, ensure you have the following installed on your machine:
