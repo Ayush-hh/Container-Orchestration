@@ -12,7 +12,7 @@ You executed:
 sh
 docker run -dit --name alpine_with_bind_mount -v D:\Anugrah\UPES\Semester6\Container Orchestration & automation\Docker Exp\Docker Volume Persistence, Bind Mounts with Linux Containers:/data alpine:latest sh
 
-![Example Image](https://github.com/Anugrah2334/Docker/blob/main/Docker%20Volume%20Persistence%3A%20Bind%20Mounts%20on%20Linux%20Container/Screenshot1.png)
+![Image](https://github.com/user-attachments/assets/2a9ed21d-eafc-4219-a55c-96e5b731199e)
 #### 🔍 What Happened?
 - Since alpine:latest was not found locally, Docker pulled it from the official repository.
 - A new container named *alpine_with_bind_mount* was created.
@@ -26,7 +26,7 @@ Inside the container, you created a file:
 sh
 docker exec -it alpine_with_bind_mount sh -c "echo 'Hello, Anugrah!' > /data/testfile.txt"
 
-![Example Image](https://github.com/Anugrah2334/Docker/blob/main/Docker%20Volume%20Persistence%3A%20Bind%20Mounts%20on%20Linux%20Container/Screenshot2.png)
+![Image](https://github.com/user-attachments/assets/aef4183e-d45f-4d9d-86d3-3ac3dbb8e0ed)
 #### 🔍 What Happened?
 - The command executed a shell inside the running container.
 - It created a file testfile.txt inside /data and wrote *"Hello, Anugrah!"* into it.
@@ -39,12 +39,12 @@ To check the contents:
 sh
 docker exec -it alpine_with_bind_mount sh -c "cat /data/testfile.txt"
 
-![Example Image](https://github.com/Anugrah2334/Docker/blob/main/Docker%20Volume%20Persistence%3A%20Bind%20Mounts%20on%20Linux%20Container/Screenshot3.png)
+![Image](https://github.com/user-attachments/assets/74de0f5c-d9ba-454e-9c7a-229acac17fb7)
 #### 📌 Output:
 
-Hello, Anugrah!
+Hello, Ayush!
 
-![Example Image](https://github.com/Anugrah2334/Docker/blob/main/Docker%20Volume%20Persistence%3A%20Bind%20Mounts%20on%20Linux%20Container/Screenshot3.png)
+![Image](https://github.com/user-attachments/assets/74de0f5c-d9ba-454e-9c7a-229acac17fb7)
 This confirms that the file was successfully created and accessible inside the container. 🎉
 
 ---
@@ -54,7 +54,7 @@ You removed the container:
 sh
 docker rm -f alpine_with_bind_mount
 
-![Example Image](https://github.com/Anugrah2334/Docker/blob/main/Docker%20Volume%20Persistence%3A%20Bind%20Mounts%20on%20Linux%20Container/Screenshot4.png)
+![Image](https://github.com/user-attachments/assets/b4d5bdf6-b8b1-4d68-95fb-f01654694b04)
 #### 🔍 What Happened?
 - The container was *forcefully stopped and removed*.
 - However, since testfile.txt was inside the bind-mounted directory, it *remained on the host system*. 🏠
@@ -66,7 +66,7 @@ You started a new container:
 sh
 docker run -dit --name new_alpine -v D:\Anugrah\UPES\Semester6\Container Orchestration & automation\Docker Exp\Docker Volume Persistence, Bind Mounts with Linux Containers:/data alpine sh
 
-![Example Image](https://github.com/Anugrah2334/Docker/blob/main/Docker%20Volume%20Persistence%3A%20Bind%20Mounts%20on%20Linux%20Container/Screenshot5.png)
+![Image](https://github.com/user-attachments/assets/2ee6ef7f-f405-4b55-b397-a54efe97bbe0)
 #### 🔍 What Happened?
 - A new container named *new_alpine* was created.
 - The same bind-mounted directory (D:\Anugrah\UPES\Semester6\Container Orchestration & automation\Docker Exp\Docker Volume Persistence, Bind Mounts with Linux Containers) was mounted to /data.
@@ -78,12 +78,12 @@ Inside the new container, you checked if testfile.txt still exists:
 sh
 docker exec -it new_alpine sh -c "cat /data/testfile.txt"
 
-![Example Image](https://github.com/Anugrah2334/Docker/blob/main/Docker%20Volume%20Persistence%3A%20Bind%20Mounts%20on%20Linux%20Container/Screenshot6.png)
+![Image](https://github.com/user-attachments/assets/2ee6ef7f-f405-4b55-b397-a54efe97bbe0)
 #### 📌 Output:
 
-Hello, Anugrah!
+Hello, Ayush!
 
-![Example Image](https://github.com/Anugrah2334/Docker/blob/main/Docker%20Volume%20Persistence%3A%20Bind%20Mounts%20on%20Linux%20Container/Screenshot6.png)
+![Image](https://github.com/user-attachments/assets/2ee6ef7f-f405-4b55-b397-a54efe97bbe0)
 This confirms that *bind mounts persist data even after a container is removed*. 🔥
 
 ---
