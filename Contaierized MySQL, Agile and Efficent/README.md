@@ -113,8 +113,6 @@ USE Tarak;
 sql
 SELECT * FROM students;
 
-![Example Image](https://github.com/ayush2334/Docker/blob/main/Containerized%20MySQL%2C%20Agile%20%26%20Efficient/Screenshot6.png)
-
 ---
 
 ## 🎉 Conclusion
